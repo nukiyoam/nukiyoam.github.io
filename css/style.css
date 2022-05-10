@@ -1306,6 +1306,8 @@ body {
   .nexmoe-post-right {
     margin: 25px 0px;
     text-align: left;
+    width: calc(100vw - 350px);
+    max-width: calc(100% + 50px);
   }
   .nexmoe-post-right .nexmoe-fixed {
     height: auto;
