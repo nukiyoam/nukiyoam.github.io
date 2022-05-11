@@ -1,3 +1,21 @@
+:root {
+  --gutter: 25px;
+  --radius: 13px;
+  --color-primary: #ff4e6a;
+  --color2: #ff761e;
+  --color3: #ffb900;
+  --color4: #33d57a;
+  --color5: #00dbff;
+  --color6: #1a98ff;
+  --color7: #9090ff;
+  --color-primary-bg: rgba(255,78,106,0.15);
+  --color2-bg: rgba(255,118,30,0.15);
+  --color3-bg: rgba(255,185,0,0.15);
+  --color4-bg: rgba(51,213,122,0.15);
+  --color5-bg: rgba(0,219,255,0.15);
+  --color6-bg: rgba(26,152,255,0.15);
+  --color7-bg: rgba(144,144,255,0.15);
+}
 .nexmoe-archives .tagcloud {
   margin-bottom: 13px;
   font-size: 0;
@@ -98,7 +116,7 @@
   content: '';
   width: 14px;
   height: 14px;
-  background: #3c4659;
+  background: var(--color-primary);
   display: inline-block;
   vertical-align: middle;
   margin-top: -2px;
@@ -151,14 +169,14 @@ article code::-webkit-scrollbar-thumb {
   background: #282c34;
   color: #abb2bf;
   margin: 25px 0;
-  border-radius: 13px;
+  border-radius: var(--radius);
   overflow: auto;
 }
 .highlight .gutter {
   border-right: 1px solid #35393b;
 }
 article pre {
-  border-radius: 13px;
+  border-radius: var(--radius);
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -210,13 +228,13 @@ article pre code:after {
 article a {
   -webkit-transition: color 0.35s ease-out;
   transition: color 0.35s ease-out;
-  color: #3c4659;
+  color: var(--color-primary);
   text-decoration: none;
   word-wrap: break-word;
 }
 article a:hover,
 article a:focus {
-  color: #3c4659;
+  color: var(--color-primary);
 }
 article a:hover {
   text-decoration: underline;
@@ -281,7 +299,7 @@ article > table.nexmoe-album img {
 }
 article img {
   display: block;
-  border-radius: 13px;
+  border-radius: var(--radius);
 }
 article h1,
 article h2,
@@ -303,7 +321,7 @@ article h6:before {
   display: inline-block;
   width: 1em;
   content: '#';
-  color: #3c4659;
+  color: var(--color-primary);
 }
 article h1 {
   font-size: 2.5em;
@@ -327,7 +345,7 @@ article h2:after {
   transition: all 0.35s ease-out;
   content: '';
   position: absolute;
-  background: #3c4659;
+  background: var(--color-primary);
   width: 1em;
   height: 5px;
   bottom: -3px;
@@ -431,7 +449,7 @@ article ol > li::before {
   border-radius: 8px;
   line-height: 1.6rem;
   background-color: rgba(60,70,89,0.1);
-  color: #3c4659;
+  color: var(--color-primary);
 }
 article li {
   line-height: 2rem;
@@ -525,7 +543,7 @@ article ul li::before {
   content: '';
   width: 14px;
   height: 14px;
-  background: #3c4659;
+  background: var(--color-primary);
   display: inline-block;
   vertical-align: middle;
   margin-top: -2px;
@@ -552,13 +570,13 @@ article ul span {
   margin-right: 15px;
 }
 article .mdui-btn {
-  background-color: #3c4659;
+  background-color: var(--color-primary);
   color: #fff;
   border-radius: 10px;
 }
 article .mdui-btn:focus,
 article .mdui-btn:hover {
-  background-color: #3c4659;
+  background-color: var(--color-primary);
   color: #fff;
 }
 font.douyin {
@@ -800,7 +818,7 @@ article.nexmoe-py ul li img {
   margin-top: 10px;
 }
 #nexmoe-search-space .search-container .search-body .search-result a .keyword {
-  color: #3c4659;
+  color: var(--color-primary);
 }
 @media screen and (max-width: 1023px) {
   .search-container {
@@ -809,6 +827,95 @@ article.nexmoe-py ul li img {
   .search-container .search-header,
   .search-container .search-body {
     width: 330px;
+  }
+}
+.nexmoe-widget-wrap .nexmoe-widget .hitokoto-box {
+  margin: 0 auto;
+  overflow: hidden;
+}
+.nexmoe-widget-wrap .nexmoe-widget .hitokoto-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: 10s wordsLoop linear infinite normal;
+}
+@-moz-keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-o-keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-moz-keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-o-keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes wordsLoop {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
   }
 }
 *,
@@ -940,7 +1047,7 @@ body {
 #nexmoe-header .nexmoe-list .nexmoe-list-item {
   padding: 0 36px;
   color: #9ca2a8;
-  border-radius: 13px;
+  border-radius: var(--radius);
   margin-bottom: 10px;
   text-align: center;
   transition: none !important;
@@ -951,8 +1058,8 @@ body {
 }
 #nexmoe-header .nexmoe-list .nexmoe-list-item.true {
   opacity: 0.9;
-  background: #3c4659;
-  box-shadow: 0 2px 12px #3c4659;
+  background: var(--color-primary);
+  box-shadow: 0 2px 12px var(--color-primary);
 }
 #nexmoe-header .nexmoe-list .nexmoe-list-item i {
   font-size: 22px;
@@ -965,7 +1072,7 @@ body {
   box-shadow: 0 0 1rem rgba(161,177,204,0.4);
   background-color: #fff;
   margin: 20px;
-  border-radius: 13px;
+  border-radius: var(--radius);
   overflow: hidden;
   white-space: normal;
 }
@@ -974,7 +1081,7 @@ body {
   font-weight: 400;
   padding: 24px 18px 12px;
   margin: 0;
-  color: #3c4659;
+  color: var(--color-primary);
 }
 #nexmoe-header .nexmoe-widget-wrap .nexmoe-widget ul {
   list-style-type: none;
@@ -1004,7 +1111,7 @@ body {
   line-height: 26px;
   text-align: center;
   border-radius: 100%;
-  color: #3c4659;
+  color: var(--color-primary);
   position: absolute;
   right: 18px;
   top: 10px;
@@ -1015,7 +1122,7 @@ body {
   padding-top: 11px;
 }
 #nexmoe-header .nexmoe-widget-wrap .tagcloud a {
-  border-radius: 13px;
+  border-radius: var(--radius);
   padding: 5px 10px;
   font-size: 12px !important;
   display: inline-block;
@@ -1036,7 +1143,7 @@ body {
   font-size: 12px;
 }
 #nexmoe-header .nexmoe-copyright a {
-  color: #3c4659;
+  color: var(--color-primary);
 }
 @media screen and (max-width: 1024px) {
   #nexmoe-header {
@@ -1064,7 +1171,7 @@ body {
   display: inline-block;
   color: #ddd;
   background-color: #f5f6f5;
-  border-radius: 13px;
+  border-radius: var(--radius);
   margin-top: -10px;
 }
 #nexmoe-content .nexmoe-primary .nexmoe-page-nav .prev {
@@ -1072,13 +1179,13 @@ body {
 }
 #nexmoe-content .nexmoe-primary .nexmoe-page-nav .current {
   color: #fff;
-  background: #3c4659;
+  background: var(--color-primary);
   opacity: 0.9;
-  box-shadow: 0 2px 12px #3c4659;
+  box-shadow: 0 2px 12px var(--color-primary);
 }
 #nexmoe-content .nexmoe-primary .nexmoe-page-nav > * {
   color: #999;
-  border-radius: 13px;
+  border-radius: var(--radius);
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -1188,7 +1295,7 @@ body {
   overflow: hidden;
 }
 #nexmoe-content .nexmoe-post .nexmoe-post-copyright a {
-  color: #3c4659;
+  color: var(--color-primary);
 }
 #nexmoe-content .nexmoe-post .nexmoe-post-copyright:after {
   position: absolute;
@@ -1350,7 +1457,7 @@ body {
 }
 .nexmoe-toc a:hover {
   text-decoration: underline;
-  color: #3c4659;
+  color: var(--color-primary);
 }
 .nexmoe-toc ol {
   padding-left: 1em;
@@ -1371,60 +1478,60 @@ photos img {
   width: 25%;
 }
 .nexmoe-rainbow a:nth-child(7n+1) {
-  background-color: rgba(60,70,89,0.15);
-  color: #3c4659;
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary);
 }
 .nexmoe-rainbow a:nth-child(7n+2) {
-  background-color: rgba(73,148,196,0.15);
-  color: #4994c4;
+  background-color: var(--color2-bg);
+  color: var(--color2);
 }
 .nexmoe-rainbow a:nth-child(7n+3) {
-  background-color: rgba(105,142,106,0.15);
-  color: #698e6a;
+  background-color: var(--color3-bg);
+  color: var(--color3);
 }
 .nexmoe-rainbow a:nth-child(7n+4) {
-  background-color: rgba(155,142,169,0.15);
-  color: #9b8ea9;
+  background-color: var(--color4-bg);
+  color: var(--color4);
 }
 .nexmoe-rainbow a:nth-child(7n+5) {
-  background-color: rgba(118,85,93,0.15);
-  color: #76555d;
+  background-color: var(--color5-bg);
+  color: var(--color5);
 }
 .nexmoe-rainbow a:nth-child(7n+6) {
-  background-color: rgba(92,79,85,0.15);
-  color: #5c4f55;
+  background-color: var(--color6-bg);
+  color: var(--color6);
 }
 .nexmoe-rainbow a:nth-child(7n+7) {
-  background-color: rgba(88,82,72,0.15);
-  color: #585248;
+  background-color: var(--color7-bg);
+  color: var(--color7);
 }
 .nexmoe-rainbow-fill a:nth-child(7n+1) {
   color: #fff;
-  background-color: rgba(60,70,89,0.9);
+  background-color: var(--color-primary);
 }
 .nexmoe-rainbow-fill a:nth-child(7n+2) {
   color: #fff;
-  background-color: rgba(73,148,196,0.7);
+  background-color: var(--color2);
 }
 .nexmoe-rainbow-fill a:nth-child(7n+3) {
   color: #fff;
-  background-color: rgba(105,142,106,0.7);
+  background-color: var(--color3);
 }
 .nexmoe-rainbow-fill a:nth-child(7n+4) {
   color: #fff;
-  background-color: rgba(155,142,169,0.7);
+  background-color: var(--color4);
 }
 .nexmoe-rainbow-fill a:nth-child(7n+5) {
   color: #fff;
-  background-color: rgba(118,85,93,0.7);
+  background-color: var(--color5);
 }
 .nexmoe-rainbow-fill a:nth-child(7n+6) {
   color: #fff;
-  background-color: rgba(92,79,85,0.7);
+  background-color: var(--color6);
 }
 .nexmoe-rainbow-fill a:nth-child(7n+7) {
   color: #fff;
-  background-color: rgba(88,82,72,0.7);
+  background-color: var(--color7);
 }
 .fancybox__container {
   z-index: 9999;
